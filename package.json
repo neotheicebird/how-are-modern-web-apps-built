@@ -6,7 +6,8 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "mdx-deck deck.mdx",
-        "build": "mdx-deck build deck.mdx"
+        "build": "npm run clean && gatsby build --prefix-paths && mv public build",
+        "deploy": "npx gh-pages --dist ./build --branch gh-pages"
     },
     "author": "Dave Follett",
     "license": "MIT",
